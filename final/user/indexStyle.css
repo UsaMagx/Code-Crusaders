@@ -1,0 +1,425 @@
+/* General Styles */
+* {
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f1e3;
+  color: #333;
+  margin-top: 75px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.badge {
+
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: green;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  margin-left:22%;
+}
+
+h2#comedy, h2#sport, h2#movies, #theatre, #art-exhibition,#music-festival{
+  margin-left:22%;
+}
+
+header h1, h2, p{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+a {
+  text-decoration: none;
+  color: #636B2F; /* Default link color */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #533b4d; /* Hover color for links */
+}
+
+/* Navigation Styles */
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  background-color: #636B2F;
+  padding: 15px 0;
+  position: fixed; /* Fix the navigation bar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.events {
+  display: flex;
+  gap: 20px; /* Space between figures */
+  margin-left:20%;
+}
+.event {
+  transition: transform 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Change cursor on hover */
+  
+}
+.navigation a {
+  color: #bec5ad;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color: #533b4d;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Side Bar Styles */
+.sideAndMain {
+  display: flex;
+  margin-left: 22%; /* Adjust to provide space for the fixed sidebar */
+  padding: 20px;
+  flex-grow: 1;
+}
+
+
+  .sideBar {
+    background-color: #97a675;
+    padding: 20px;
+    width: 20%;
+    border-radius: 10px;
+    position: fixed; /* Fix the sidebar */
+    top: 75px; /* Adjust this to be just below the navigation bar */
+    left: 0;
+    height: calc(100vh - 75px - 50px); /* Subtract header and footer heights */
+    overflow-y: auto; /* Allows scrolling within the sidebar if content overflows */
+    z-index: 999; /* Ensure the sidebar is below the navigation bar but above main content */
+  }
+
+.sideElement {
+  margin-bottom: 20px;
+  
+}
+
+.sideElement input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #636B2F;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #533b4d;
+}
+
+/* Dropdown Styles */
+.category {
+  position: relative;
+}
+
+.drop-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #636B2F;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 160px;
+  z-index: 1; /* Ensure dropdown stays above other content */
+}
+
+.category:hover .drop-content {
+  display: block;
+}
+
+.drop-content a {
+  color: #fff;
+  display: block;
+  padding: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.drop-content a:hover {
+  background-color: greenyellow;
+}
+
+/* Article Styles */
+article {
+  background-color: #f5f1e3;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Ensure article takes up the remaining space */
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #141301;
+}
+
+header h2 {
+  font-size: 1.8em;
+  color: #636B2F;
+}
+
+header p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.5em;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #636B2F;
+  padding: 15px 0;
+  position: fixed; /* Fix the navigation bar at the top */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+footer a {
+  color: #ff9f1a;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .sideAndMain {
+      flex-direction: column;
+  }
+
+  .sideBar {
+      width: 100%;
+      margin-right: 0;
+  }
+
+  article {
+      width: 100%;
+  }
+
+  .navigation {
+      flex-direction: column;
+  }
+
+  .navigation a {
+      padding: 10px;
+      text-align: center;
+  }
+}
+
+/* Container for events */
+.events {
+  display: grid; /* Use grid layout for events */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 1rem; /* Space between items */
+  padding: 1rem;
+  margin-top: 40px; /* Ensure space between events and slideshow */
+}
+
+/* Individual event card */
+.event {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  background-color: #636B2F;
+  flex-direction: column;
+  height: 400px; /* Fixed height for consistency */
+  border: 3px solid #636B2F; /* Add a green border */
+  transition: transform 0.3s ease; /* Smooth transition effect */
+  cursor: pointer; /* Change cursor on hover */
+}
+.event:hover {
+  transform: scale(1.05); /* Increase size by 5% on hover */
+}
+
+.event img {
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Ensure images cover the area */
+}
+
+.event-description {
+  padding: 1rem;
+  flex: 1; /* Allows description to take up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between content and footer */
+}
+
+.event-description h3 {
+  color: #141301;
+}
+
+.event-description p {
+  color: #333;
+  margin-bottom: 2rem; /* Space for the "Rate Event" link */
+}
+
+.rate-link {
+  color: #636B2F;
+  text-decoration: none;
+  align-self: center; /* Center the link horizontally */
+  margin-top: auto; /* Push the link to the bottom */
+}
+
+.rate-link:hover {
+  text-decoration: underline;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 0px; /* Remove the bottom margin */
+  padding-bottom: 10px; /* Add some padding to bring dots closer */
+}
+
+.mySlides {
+  display: none; /* Hide the images by default */
+  height: 500px;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 5px 2px; /* Reduce margin around dots */
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+
+/* Slideshow container images */
+.slideshow-container img {
+  height: 400px; /* Set a fixed height for all images */
+  width: 100%; /* Ensure the image stretches to fill the width */
+  object-fit: cover; /* Ensures the image scales without distortion and covers the entire container */
+ border: 5px solid #636B2F; /* Add a green border */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+.mySlides img {
+  width: 100%;
+  height: 400px; /* Adjust the image height */
+  object-fit: cover;
+}
+/* Center dots and reduce spacing from the image */
+.dot-container {
+  text-align: center;
+  margin-top: 5px; /* Reduce the space between the image and dots */
+}
+.event-button {
+   /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around the button */
+  background-color: #636B2F;
+  border: none; /* No borders */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Button font size */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.event-button:hover {
+  background-color: #bec5ad; /* Button color on hover */
+}

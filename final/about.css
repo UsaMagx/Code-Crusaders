@@ -1,0 +1,108 @@
+/*desktop view*/
+@media screen and (min-width: 769px) {
+nav {
+   /* nav at the top starting on the left */
+    margin: 0;  
+    padding: 0;
+    overflow:hidden;
+  }
+/* fill page width and have height of 80%*/
+  footer{
+    width:100%; /* fill page width*/
+    height:80%;
+    padding: 3px;
+  }
+
+  .pictures {
+    column-count: 3; /* pictures and desciptions will  each have their own column*/
+    column-gap: 50px;/* Space between pictures and desciptions */
+
+}
+
+
+/*cart */
+ i{
+  float: right; /* move to the right of the navigation bar*/
+  color:#bec5ad ; /* color of the links*/
+ 
+  padding: 14px 16px; /* position it half way the nav bar*/
+  
+}
+ /* for all of the links in the nav bar*/
+  .nav1 {
+    float: left;/* move to the left of the navigation bar*/
+  
+    color: #bec5ad;/* color of the links*/
+    
+    padding: 14px 16px;
+    text-decoration: none; /* remove the underline of the links of the nav*/
+  }
+  /*when hovering over the links in the nav bar*/
+  a:hover:not(.active),i:hover:not(.active) {
+    background-color: #533b4d; 
+  }
+}
+
+
+   /*phone view*/
+     @media screen and (max-width: 480px) {
+    /* ignore all css */
+    
+      .nav1{
+        float: left;/* move to the left of the navigation bar*/
+    
+        color: #bec5ad;/* color of the links*/
+        
+        padding: 10px 16px;
+        text-decoration: none; /* remove the underline of the links of the nav*/
+      }
+      footer{
+        width:100%; /* fill page width*/
+        
+        padding: 9px 10px;
+      }
+      /*when hovering over the links in the nav bar*/
+      a:hover:not(.active),i:hover:not(.active) {
+        background-color: #533b4d; 
+      }
+    /*cart */
+     i {
+    float: right; /* move to the right of the navigation bar*/
+    color: #bec5ad;
+    padding: 10px 16px; /* position it half way the nav bar*/
+     }
+  }
+
+
+  
+
+/*tablet view*/
+@media screen and (min-width: 481px) and (max-width: 769px){
+  
+    .nav1{
+      float: left;/* move to the left of the navigation bar*/
+  
+      color: #bec5ad; /* color of the links*/
+      
+      padding: 10px 16px;
+      text-decoration: none; /* remove the underline of the links of the nav*/
+    }
+    footer{
+      width:100%; /* fill page width*/
+      
+      padding: 9px 10px;/* increase size of footer ,more wider*/
+    }
+    /*when hovering over the links in the nav bar*/
+    a:hover:not(.active),i:hover:not(.active) {
+      background-color: #533b4d; 
+    }
+  
+   i {
+    float: right; /* move to the right of the navigation bar*/
+     color:#bec5ad ;/* color of the links*/
+     padding: 10px 16px; /* position it half way the nav bar*/
+   }
+}
+
+
+ 

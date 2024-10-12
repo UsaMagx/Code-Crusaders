@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="payment.css"> <!-- Optional CSS file for styles -->
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+        .navigation a {
+  color: #bec5ad;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navigation a:hover {
+  background-color: #533b4d;
+  color: #fff;
+  border-radius: 5px;
+}
+    </style>
+    <!-- <script src="payment.js" defer></script>  --><!-- Link to external JavaScript file -->
+</head>
+<body>
+    <nav style='background-color: #636B2F'class='navigation'>
+        <a href='index.php' style='color: #bec5ad'>BACK</a>
+        <a href='../login/logout.php' style='color: #bec5ad'>LOG OUT</a>
+    </nav>
+    <form id="paymentForm" action="payment.php" method="post">
+        <div>
+            <label><b>Name on Card</b></label><br>
+            <input type="text" id="nameOnCard" placeholder="Enter Name on Card" required>
+        </div>
+
+        <div class="CardNumber">
+            <label><b>Card Number</b></label><br>
+            <input type="text" id="cardNumber" placeholder="Enter 16-digit Card Number" maxlength="16" required>
+        </div>
+
+        <div class="Expiry">
+            <label><b>Expiry Date</b></label><br>
+            <input type="text" id="month" name="month" min="1" max="12" placeholder="MM" required>
+        </div>
+
+        <div class="CVV">
+            <label for="date">CVV</label><br>
+            <input type="text" id="cvv" placeholder="Enter CVV" maxlength="3" required>
+        </div>
+
+        <p>Billing Address</p>
+        <div class="address">
+            <label>Address</label><br>
+            <input type="text" id="address" placeholder="Enter Address" required>
+        </div>
+
+        <div class="City">
+            <label>City</label><br>
+            <input type="text" id="city" placeholder="Enter City" required>
+        </div>
+
+        <div class="Province">
+            <label>Province</label><br>
+            <input type="text" id="province" placeholder="Enter Province" required>
+        </div>
+
+        <div class="Postal">
+            <label>Postal Code</label><br>
+            <input type="text" id="postal" placeholder="Enter Postal Code" required>
+        </div>
+
+        <div class="Paybtn">
+            <button type="submit" id='pay' class="payNow">Pay Now</button>
+        </div>
+    </form>
+
+    <footer style="text-align:center;background-color: #636B2F;">
+        <p style="color: #bec5ad;">&copy; Author: Code Crusaders | <a href="mailto:codecrusaders@gmail.com">codecrusaders@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>

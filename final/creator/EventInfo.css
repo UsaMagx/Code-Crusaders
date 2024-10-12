@@ -1,0 +1,211 @@
+/* General Styles */
+* {
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f1e3;
+    color: #333;
+    margin-top: 75px;
+    height: 100%;
+  }
+  
+  h1,
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #636B2F; /* Default link color */
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #533b4d; /* Hover color for links */
+  }
+  
+  /* Navigation Styles */
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: #636B2F;
+    padding: 15px 0;
+    position: fixed; /* Fix the navigation bar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navigation a {
+    color: #bec5ad;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navigation a:hover {
+    background-color: #533b4d;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  figure {
+    display: block;
+    margin: 10px auto; /* Add margin to give space around figure */
+    width: 80%; /* Ensure the figure takes full width */
+    text-align: center; /* Centers the caption inside the figure */
+    max-width: 100%; /* Ensure the figure does not exceed its container */
+    max-height: 80vh; /* Set a maximum height for the figure to avoid overflow */
+    overflow: hidden; /* Hide overflow to prevent content spilling out */
+  }
+  
+  img {
+    width: 80%; /* Ensures the image doesn't overflow */
+    height: auto; /* Maintain aspect ratio of the image */
+    border: 3px solid #636B2F; /* Add a green border */
+    border-radius: 5px; /* Optional: Rounded corners for images */
+    max-height: 400px; /* Set a maximum height for the image */
+    object-fit: cover; /* Ensures the image covers the entire area while preserving aspect ratio */
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .main {
+    display: flex;
+    
+    height: calc(100vh - 75px - 100px); /* Full height minus navigation height and estimated footer height */
+    overflow: auto; /* Allow scrolling if content exceeds height */
+  }
+  
+  .event {
+    flex: 1; /* Increase the space for the event section */
+    padding-bottom: 20px; /* Optional: Add padding to the bottom for spacing */
+  }
+  
+  .details {
+    flex: 1; /* Takes half the space of event */
+    padding: 20px; /* Padding around the content */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 500px; /* Optional: Set a max width */
+  }
+  
+  .event figure {
+    width: 100%; /* Ensure figure takes full width of its container */
+    margin: 0; /* Remove margin to utilize full space */
+    padding: 10px; /* Optional: Add padding inside figure */
+  }
+  
+  .details div {
+    display: flex;
+    margin-bottom: 10px; /* Space between rows */
+  }
+  
+  /* Form Group Styles */
+  .form-group {
+    display: flex; /* Use flexbox to align labels and values side by side */
+    margin-bottom: 15px; /* Space between each form group */
+  }
+  
+  .label {
+    flex: 1; /* Make label take equal space */
+    padding: 10px; /* Padding inside the label */
+    border-radius: 5px; /* Rounded corners for label */
+  }
+  
+  .value {
+    flex: 2; /* Make value take double space */
+    padding: 10px; /* Padding inside the value */
+    border: 1px solid #999; /* Border around the value */
+    border-radius: 5px; /* Rounded corners for value */
+    background-color: #fff; /* White background for the value */
+  }
+  
+  figcaption {
+    font-size: 1.5em; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    color: #fff; /* Change the color if desired */
+    text-align: center; /* Center the text */
+    margin-top: 10px; /* Space between the image and caption */
+  }
+  
+  .buy-button {
+    display: block;
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for the button */
+    background-color: #636B2F; /* Button background color */
+    color: #fff; /* Button text color */
+    font-size: 1.5em; /* Font size for button */
+    font-weight: bold; /* Bold text for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    margin-top: 20px; /* Space above button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .buy-button:hover {
+    background-color: #533b4d; /* Darker color on hover */
+  }
+  
+  /* Footer Styles */
+  .footer {
+    padding: 20px; /* Add padding to the footer */
+    text-align: center; /* Center align footer content */
+    background-color: #636B2F; /* Footer background color */
+    color: #bec5ad; /* Footer text color */
+    position: relative; /* Ensures it behaves well within the layout */
+    margin-top: 20px; /* Space above footer */
+  }
+  
+  footer {
+    margin-top: 20px; /* Add space between the content and footer */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .main {
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Allow height to auto-adjust */
+    }
+  
+    .event {
+      order: 1; /* Ensure event comes first */
+    }
+  
+    .details {
+      order: 2; /* Ensure details come after event */
+    }
+  }
+  
+  /* Footer Styles */
+  footer {
+    padding: 20px;
+    text-align: center;
+    color: #bec5ad;
+  }
+  
+  footer a {
+    color: #bec5ad;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    footer {
+      font-size: 14px;
+    }
+  }
+  

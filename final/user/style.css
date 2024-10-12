@@ -1,0 +1,226 @@
+/* Styling for content within the body of a device min 770px*/
+body {
+    background-color: #f5f1e3;
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;  /*spaces out the contents in the body evenly*/
+    justify-content: center;      /*puts the contents in the center horizontally, with even spaces because of the flexbox*/
+    align-items: center;        /*puts the contents in the center vertically, with even spaces because of the flexbox*/  
+    height: 100vh; /*that contents takes up the full view*/
+}
+
+
+
+/*Styling for the form*/
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
+    width: 90%;
+    max-width: 400px;
+    text-align: center;     /*aligns the text within the form to the center*/
+    border: 2px solid #533b4d;
+}
+
+form h1 {    /*Styles the header in the form*/
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #533b4d;
+}
+
+form p {        /*Styles the p tags inside the form*/
+    margin-bottom: 20px;
+    color: #533b4d;
+}
+
+/*Styles the labels*/
+label {
+    font-weight: bold;  /*makes the labels stand out*/
+    display: block;       /*This forces the labels into a block element of equal size. This means that the input boxes will all start in the same place */
+    margin-bottom: 8px;    /*amount of space between the labels*/
+    width:300px;          /*with of the block element that label is inside of */
+    text-align: left;
+    color: #533b4d;
+}
+
+input {
+    align-items: flex-end;  /*ensures each input ends at the same place. Now the inputs are all equal size*/
+    width: 100%;
+    padding: 12px;
+    margin-left:40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f1e3;
+    box-sizing: border-box;
+}
+
+.inpdata {
+    display: flex;  /*labels and the input from the same div in one line*/
+}
+
+.error {
+    display: none; /* Initially hide the error message */
+    color: red;    /* Optional: Set text color for visibility */
+}
+
+/* Style for buttons */
+/* .buttons {
+    display: flex; 
+    flex-direction: row;
+    gap: 10px;    
+}
+
+button {
+    background-color: #533b4d;
+    color: #bec5ad;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+} */
+
+.cancelbtn .loginbtn {
+    background-color: #533b4d; /* Your background color */
+    color: #bec5ad;           /* Your text color */
+    border: none;
+    padding: 8px 16px;        /* Smaller padding */
+    border-radius: 5px;       /* Rounded corners */
+    cursor: pointer;
+    font-size: 14px;          /* Smaller font size */
+    transition: background-color 0.3s ease; /* Smooth background change */
+    margin: 5px;              /* Space between buttons */
+}
+
+/* Hover effects */
+.cancelbtn:hover, .loginbtn:hover {
+    background-color: #402f3b; /* Slightly darker shade on hover */
+}
+
+
+button:hover {
+    background-color: #40293c;
+}
+
+.cancelbtn, .signupbtn {
+    width: 100%;
+}
+
+/* Switch link styling */
+.switch-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.switch-link a {
+    color: #533b4d;
+    text-decoration: none;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 481px) and (max-width:769px) {/*This media query is for tablets. The sizing is slightly smaller than those from the pc view*/
+    form{
+        padding: 20px;
+        width: 80%;
+        max-width: 350px;
+    }
+
+    form h1 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    form p {
+        margin-bottom: 15px;
+    }
+
+    label {
+        width:250px;
+        font-size: 16px;
+    }
+
+    input {
+        padding: 10px;
+        margin-left:30px;
+        margin-right: 30px;
+        margin-bottom: 15px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .switch-link {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:480px){/*this view is for the mobile phone */
+    form{
+        padding: 15px;
+        width: 70%;
+        max-width: 300px;
+    }
+
+    form h1 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    form p {
+        margin-bottom: 10px;
+    }
+
+    label {
+        width:200px;
+        font-size: 14px;
+    }
+
+    input {
+        padding: 8px;
+        margin-left:20px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .switch-link {
+        margin-top: 10px;
+        font-size: 10px;
+    }
+     
+}
+
+.role-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+.role-container input {
+    margin-right: 5px; /* Space between radio button and label */
+}
+.role-container label {
+    margin-right: 20px; /* Space between each radio button group */
+}
+

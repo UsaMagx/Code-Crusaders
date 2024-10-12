@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f1e3;
+    color: #333;
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: #636B2F;
+    padding: 15px 0;
+    position: fixed; /* Fix the navigation bar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  
+  .navigation a {
+    color: #bec5ad;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .navigation a:hover {
+    background-color: #533b4d;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
